@@ -1,18 +1,12 @@
 const express = require('express')
 const cors = require('cors')
 const mongoose = require('mongoose')
-const path = require('path')
 
 const app = express()
 app.use(cors())
 app.use (express. json())
 
-//static files 
-app.use (express.static(path.join(__dirname, './client/build')));
 
-app.get('*' , function(req , res){
-    res.sendFilepath.join(__dirname, "./client/build/index.html");
-});
 
 const PORT = process.env.PORT || 8080
 //  schema
