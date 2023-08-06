@@ -57,7 +57,7 @@ app.delete("/delete/:id" , async(req,res)=>{
 })
 
 
-mongoose.connect("mongodb://127.0.0.1:27017/crud")
+mongoose.connect("mongodb://localhost:27017/crud")
 .then(()=>{
     console.log("connected to db ") 
   app.listen(PORT,()=>console.log("server is running"))
