@@ -2,11 +2,10 @@ const express = require('express')
 const cors = require('cors')
 const mongoose = require('mongoose')
 
+
 const app = express()
 app.use(cors())
 app.use (express. json())
-
-
 
 const PORT = process.env.PORT || 8080
 //  schema
@@ -58,14 +57,12 @@ app.delete("/delete/:id" , async(req,res)=>{
 })
 
 
-
-
 mongoose.connect("mongodb://127.0.0.1:27017/crud")
 .then(()=>{
-    // console.log("connected to db ") 
-    app.listen(PORT,()=>console.log("server is running"))
+    console.log("connected to db ") 
+  app.listen(PORT,()=>console.log("server is running"))
 
 
 })
 
-// .catch((err)=>console.log(err))
+ .catch((err)=>console.log(err))
